@@ -60,7 +60,10 @@ pub mod twitter {
     pub fn comment_tweet(ctx: Context<AddCommentContext>, comment_content: String) -> Result<()> {
         add_comment(ctx, comment_content)
     }
-    pub fn comment_remove(ctx: Context<RemoveCommentContext>) -> Result<()> {
-        remove_comment(ctx)
+    // pub fn comment_remove(ctx: Context<RemoveCommentContext>) -> Result<()> {
+    //     remove_comment(ctx)
+    // }
+    pub fn comment_remove(ctx: Context<RemoveCommentContext>, comment_content: String) -> Result<()> {
+        remove_comment(ctx, comment_content)
     }
 }
